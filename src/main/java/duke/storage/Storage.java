@@ -13,6 +13,8 @@ import duke.task.eventtask.EventTask;
 import duke.task.todo.ToDo;
 import duke.tasklist.TaskList;
 
+
+
 /**
  * Storage class that deals with loading tasks from the file and saving tasks in the file.
  */
@@ -81,11 +83,10 @@ public class Storage {
             return new ToDo(task);
         case 'D':
             return new Deadline(task);
-        case 'E':
-            return new EventTask(task);
         default:
-            assert false : "task type not found for taskCreator method";
-            return null;
+            return new EventTask(task);
         }
     }
+
+
 }
